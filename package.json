@@ -1,0 +1,61 @@
+{
+  "name": "inkex",
+  "version": "1.0.0",
+  "description": "A lightweight, fast dynamic HTML template parser and renderer.",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE.txt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lyricraft/inkex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lyricraft/inkex/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "homepage": "https://github.com/Lyricraft/inkex#readme",
+  "scripts": {
+    "build": "tsup",
+    "build:check": "tsc --noEmit",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "html",
+    "template",
+    "template-engine",
+    "renderer",
+    "parser",
+    "placeholder",
+    "lightweight",
+    "typescript"
+  ],
+  "author": "lyricraft",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsup": "^8.5.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "dependencies": {
+    "htmlparser2": "^12.0.0"
+  }
+}
