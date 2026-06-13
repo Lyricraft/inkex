@@ -1,5 +1,5 @@
 {
-  "name": "inkex",
+  "name": "inkex-html",
   "version": "1.0.0",
   "description": "A lightweight, fast dynamic HTML template parser and renderer.",
   "sideEffects": false,

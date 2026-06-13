@@ -9,13 +9,13 @@ Define placeholders and templates with custom HTML tags — no template syntax l
 ## Install / 安装
 
 ```sh
-npm install inkex
+npm install inkex-html
 ```
 
 ## Quick Start / 快速开始
 
 ```ts
-import { inkex } from 'inkex';
+import { inkex } from 'inkex-html';
 
 const result = inkex('<h1><inkex-placeholder tag="title"></inkex-placeholder></h1>')
   .placeholder('title', () => 'Hello World')
@@ -51,7 +51,7 @@ The inner content between `<inkex-template>` tags is passed to the handler. Call
 模板标签内的内容会自动传入 handler，通过 `this.getTemplate()` 获取。
 
 ```ts
-import { InkexPlainTemplateHandler } from 'inkex';
+import { InkexPlainTemplateHandler } from 'inkex-html';
 
 class BoldText extends InkexPlainTemplateHandler {
   protected handle(ctx: object): string {
@@ -75,7 +75,7 @@ Each call to `getInkex().render(ctx)` reuses the same inner template definition 
 同一个嵌套模板可以用不同的 context 反复渲染，适合列表等重复结构。
 
 ```ts
-import { InkexNestedTemplateHandler, InkexHandleRegister } from 'inkex';
+import { InkexNestedTemplateHandler, InkexHandleRegister } from 'inkex-html';
 
 // Define the inner layout once
 // 定义一次内部布局
